@@ -4,12 +4,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class HomeActivity extends AppCompatActivity
+        implements View.OnClickListener {
 
     private int counter = 0;
 
@@ -17,7 +16,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private Button increaseBtn;
     private Button decreaseBtn;
     private TextView counterTv;
-    int counter = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,61 +27,56 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         increaseBtn = findViewById(R.id.increase_btn);
         decreaseBtn = findViewById(R.id.decrease_btn);
 
-
         initUI();
     }
 
-    public void decrement () {
-        if (counter<1)
-            display(0);
-        else {
-        counter--;
-        display(counter);}
-
-    }
     private void initUI() {
         resetBtn.setOnClickListener(this);
         increaseBtn.setOnClickListener(this);
         decreaseBtn.setOnClickListener(this);
     }
 
-    private void display (String text) {
-        TextView textView_counter = findViewById(R.id.counter_tv);
-        textView_counter.setText(""+text);
-    }
-
-    private void display (int text) {
-        TextView textView_counter = findViewById(R.id.counter_tv);
-        textView_counter.setText(""+text);
+    /**
+     * this will show up counter value to the view
+     *
+     * @param counter the counter value
+     */
+    private void display(int counter) {
+        counterTv.setText(String.valueOf(counter));
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.increase_btn:
-                Increas();
+                increaseCounter();
                 break;
             case R.id.decrease_btn:
-                Toast.makeText(this, "decrease", Toast.LENGTH_SHORT).show();
-                decrement();
+                decrementCounter();
                 break;
             default:
-                resetButton();
-                Toast.makeText(this, "reset", Toast.LENGTH_SHORT).show();
+                resetCounter();
                 break;
         }
     }
 
 
-    public void resetButton (){
+    private void resetCounter() {
         counter = 0;
-        counterTv.setText(String.valueOf(counter));
+        display(counter);
     }
 
-    public void Increas (){
-        counter ++;
-        String c = String.valueOf(counter);
-        counterTv.setText(c);
+    private void increaseCounter() {
+        counter++;
+        display(counter);
+    }
 
+    private void decrementCounter() {
+        if (counter < 1)
+            display(0);
+        else {
+            counter--;
+            display(counter);
+        }
     }
 }
