@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * handle login validation
  * @since 27th, Sep 2019
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
     private static final String TAG = "MainActivityTag";
 
