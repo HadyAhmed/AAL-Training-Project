@@ -10,12 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
+
+    private int counter = 0;
+
     private Button resetBtn;
     private Button increaseBtn;
     private Button decreaseBtn;
     private TextView counterTv;
     int counter = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,23 +28,43 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         increaseBtn = findViewById(R.id.increase_btn);
         decreaseBtn = findViewById(R.id.decrease_btn);
 
+
         initUI();
     }
 
+    public void decrement () {
+        if (counter<1)
+            display(0);
+        else {
+        counter--;
+        display(counter);}
+
+    }
     private void initUI() {
         resetBtn.setOnClickListener(this);
         increaseBtn.setOnClickListener(this);
         decreaseBtn.setOnClickListener(this);
     }
 
+    private void display (String text) {
+        TextView textView_counter = findViewById(R.id.counter_tv);
+        textView_counter.setText(""+text);
+    }
+
+    private void display (int text) {
+        TextView textView_counter = findViewById(R.id.counter_tv);
+        textView_counter.setText(""+text);
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.increase_btn:
-                Toast.makeText(this, "increase", Toast.LENGTH_SHORT).show();
+                Increas();
                 break;
             case R.id.decrease_btn:
                 Toast.makeText(this, "decrease", Toast.LENGTH_SHORT).show();
+                decrement();
                 break;
             default:
                 resetButton();
@@ -51,8 +73,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+
     public void resetButton (){
         counter = 0;
         counterTv.setText(String.valueOf(counter));
+    }
+
+    public void Increas (){
+        counter ++;
+        String c = String.valueOf(counter);
+        counterTv.setText(c);
+
     }
 }

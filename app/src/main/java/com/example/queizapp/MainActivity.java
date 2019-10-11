@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * handle login validation
  * @since 27th, Sep 2019
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
     private static final String TAG = "MainActivityTag";
 
@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
     private Button button;
     private EditText username, password;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.login_button);
         username = findViewById(R.id.username_et);
         password = findViewById(R.id.password_et);
+
 
 
         button.setOnClickListener(new View.OnClickListener() {

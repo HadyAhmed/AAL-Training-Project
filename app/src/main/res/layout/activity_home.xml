@@ -13,7 +13,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="65"
         android:textColor="@android:color/black"
         android:textSize="45sp" />
 
@@ -44,6 +43,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Decrease"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+
+            />
     </LinearLayout>
 </LinearLayout>
