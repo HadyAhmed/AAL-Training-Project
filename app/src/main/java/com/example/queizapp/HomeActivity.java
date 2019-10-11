@@ -38,14 +38,13 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.increase_btn:
-
+                Toast.makeText(this, "increase", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.decrease_btn:
-
+                Toast.makeText(this, "decrease", Toast.LENGTH_SHORT).show();
                 break;
-
             default:
-
+                Toast.makeText(this, "reset", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
