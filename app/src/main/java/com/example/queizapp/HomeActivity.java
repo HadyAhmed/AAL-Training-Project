@@ -14,6 +14,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private Button increaseBtn;
     private Button decreaseBtn;
     private TextView counterTv;
+    int counter = 65 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,13 +26,32 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         increaseBtn = findViewById(R.id.increase_btn);
         decreaseBtn = findViewById(R.id.decrease_btn);
 
+
         initUI();
     }
 
+    public void decrement () {
+        if (counter<1)
+            display(0);
+        else {
+        counter--;
+        display(counter);}
+
+    }
     private void initUI() {
         resetBtn.setOnClickListener(this);
         increaseBtn.setOnClickListener(this);
         decreaseBtn.setOnClickListener(this);
+    }
+
+    private void display (String text) {
+        TextView textView_counter = findViewById(R.id.counter_tv);
+        textView_counter.setText(""+text);
+    }
+
+    private void display (int text) {
+        TextView textView_counter = findViewById(R.id.counter_tv);
+        textView_counter.setText(""+text);
     }
 
     @Override
@@ -42,6 +62,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.decrease_btn:
                 Toast.makeText(this, "decrease", Toast.LENGTH_SHORT).show();
+                decrement();
                 break;
             default:
                 Toast.makeText(this, "reset", Toast.LENGTH_SHORT).show();
