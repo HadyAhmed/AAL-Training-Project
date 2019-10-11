@@ -1,0 +1,9 @@
+
+…squid:S1845"gRename field "password" to prevent any misunderstanding/clash with field "PASSWORD" defined on line 26.(‡‰‹¨8‚ù’×-
+tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(Ãû•8‚ù’×-
+lsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(²Ú±8ª‹î×-
+\squid:UnusedPrivateMethod`"0Remove this unused private "getPassword" method.(ôŠµæ8ï¯Š“×-
+Jsquid:S1068"'Remove this unused "TAG" private field.(É‚êøÿÿÿÿ8›Û’×-
+asquid:UnusedPrivateMethod\"0Remove this unused private "getUserName" method.(áÈ–Äøÿÿÿÿ8ï¯Š“×-
+ssquid:S1450"URemove the "button" field and declare it as a local variable in the relevant methods.(ÈòÉ¹8ª‹î×-
+Jsquid:S1068",Remove this unused "PASSWORD" private field.(Ãû•8œ×“×-

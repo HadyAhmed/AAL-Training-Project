@@ -41,11 +41,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, "increase", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.decrease_btn:
-
+                Toast.makeText(this, "decrease", Toast.LENGTH_SHORT).show();
                 break;
-
             default:
-
+                Toast.makeText(this, "reset", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

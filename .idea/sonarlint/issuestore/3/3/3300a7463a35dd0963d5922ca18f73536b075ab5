@@ -1,0 +1,4 @@
+
+qsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(Ÿæääûÿÿÿÿ8”ïß”×-
+{squid:S1450"XRemove the "counterTv" field and declare it as a local variable in the relevant methods.(Ÿ²Í¤ùÿÿÿÿ8Óõ²”×-
+Psquid:S1068"-Remove this unused "counterTv" private field.(Ÿ²Í¤ùÿÿÿÿ8Š½’”×-
