@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
+
+    private int counter = 0;
+
     private Button resetBtn;
     private Button increaseBtn;
     private Button decreaseBtn;
@@ -38,7 +41,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.increase_btn:
-                Toast.makeText(this, "increase", Toast.LENGTH_SHORT).show();
+                Increas();
                 break;
             case R.id.decrease_btn:
                 Toast.makeText(this, "decrease", Toast.LENGTH_SHORT).show();
@@ -48,4 +51,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+    public void Increas (){
+        counter ++;
+        String c = String.valueOf(counter);
+        counterTv.setText(c);
+
+    }
+
 }
